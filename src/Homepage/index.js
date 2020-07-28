@@ -1,8 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import SearchForm from "../SearchForm";
 import ImageDashboard from "../ImageList";
-
-const CLIENT_ID = "";
+import{ CLIENT_ID } from "../consts"
 
 function usePrevious(value) {
   const ref = useRef();
