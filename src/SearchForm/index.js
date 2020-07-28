@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 import "./search.css"
 
 function SearchForm({ search, setSearch, handleSearch }) {
@@ -11,7 +11,7 @@ function SearchForm({ search, setSearch, handleSearch }) {
       onChange={e => setSearch(e.target.value)}
       onKeyDown={handleSearch}
     />
-  );
+  )
 }
 
-export default SearchForm;
+export default SearchForm
