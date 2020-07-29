@@ -14,4 +14,4 @@
   ## Feature
 
    - enter the photo name and press enter key, shows the list of image
-   -  click on image, modal will popup
+   -  click on image, view the image and can download the image.
