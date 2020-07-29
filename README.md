@@ -11,7 +11,7 @@
   Note: Must to add accessKey to run this project
 
 
-  ## feature
+  ## Feature
 
    - enter the photo name and press enter key, shows the list of image
    -  click on image, modal will popup
