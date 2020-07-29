@@ -7,7 +7,7 @@ function ImageDashboard({ imageList }) {
   const [ selectedImage, setSelectedImg] = useState({})
   return (
     <div className="image-list-container">
-      {imageList.map(({ id, alt_description, urls, links}) => (
+      {imageList.map(({ id, alt_description, urls, links }) => (
         <div key={id}>
           <img alt={alt_description} src={urls.small} onClick={() => {
             setSelectedImg({ id, alt_description, urls, links})
@@ -17,9 +17,7 @@ function ImageDashboard({ imageList }) {
             />
         </div>
       ))}
-      {open && <Modal toggle={toggle} selectedImage={selectedImage} />
-
-      }
+      {open && <Modal toggle={toggle} selectedImage={selectedImage} />}
     </div>
   )
 }

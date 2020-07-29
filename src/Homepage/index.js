@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import SearchForm from "../SearchForm";
-import ImageDashboard from "../ImageList";
+import ImageDashboard from "../ImageList"
 import { CLIENT_ID } from "../consts";
 import "./homepage.css"
 
