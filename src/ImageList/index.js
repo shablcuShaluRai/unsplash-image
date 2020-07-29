@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from "react"
 import Modal from "../Modal"
 import "./styles.css"
 
@@ -11,16 +11,15 @@ function ImageDashboard({ imageList }) {
         <div key={id}>
           <img alt={alt_description} src={urls.small} onClick={() => {
             setSelectedImg({ id, alt_description, urls, links})
-            toggle(true)}
+            toggle(true)
+          }
           }
             />
         </div>
       ))}
-      {open && <Modal toggle={toggle} selectedImage={selectedImage} />
-
-      }
+      {open && <Modal toggle={toggle} selectedImage={selectedImage} />}
     </div>
-  );
+  )
 }
 
-export default ImageDashboard;
+export default ImageDashboard

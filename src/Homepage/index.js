@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import SearchForm from "../SearchForm";
-import ImageDashboard from "../ImageList";
-import{ CLIENT_ID } from "../consts"
+import ImageDashboard from "../ImageList"
+import { CLIENT_ID } from "../consts";
+import "./homepage.css"
 
 function usePrevious(value) {
   const ref = useRef();
@@ -44,24 +45,29 @@ function Homepage() {
     }
   };
   return (
-    <div className="Homepage">
-      <div>unsplash image</div>
-
+    <div className="homepage">
+      <h1>Unsplash Image Search</h1>
       <SearchForm
         search={search}
         setSearch={setSearch}
         handleSearch={handleSearch}
       />
-      <ImageDashboard imageList={imageList} />
+      {imageList.length > 0 ? (
+        <ImageDashboard imageList={imageList} />
+      ) : (
+        <p>Search for image and hit the enter key</p>
+      )}
 
-      <button
-        onClick={() => {
-          setPage(page + 1);
-          handleLoadMoe();
-        }}
-      >
-        Load More
-      </button>
+      {imageList.length > 0 && (
+        <button
+          onClick={() => {
+            setPage(page + 1);
+            handleLoadMoe();
+          }}
+        >
+          Load More
+        </button>
+      )}
     </div>
   );
 }
